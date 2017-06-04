@@ -57,3 +57,4 @@ def function7(series, chat_id, token, keyboard):
 def function8(series, chat_id, token, keyboard):
     text = "Сериал %s" %series
     requests.get('https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s&reply_markup=%s' % (token, chat_id, text, keyboard))
+    

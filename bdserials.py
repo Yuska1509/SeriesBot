@@ -30,4 +30,3 @@ def addEpisodes(s, e):
 def addPodpiski(sid, uid):
    a.query('insert into Podpiski(sid, uid) values (%d, %d);'%(sid, uid))
    a.save()
-

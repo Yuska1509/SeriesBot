@@ -122,4 +122,3 @@ def stat_file():
     return static_file('serials.db', root=".", download=True)
 
 run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
-

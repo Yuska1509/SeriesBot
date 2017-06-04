@@ -127,3 +127,4 @@ class StateTraveler:
             Functions.function7(series, self.user_id, token, keyboard)
         if action == 8:
             Functions.function8(series, self.user_id, token, keyboard)
+            
