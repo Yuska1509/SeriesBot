@@ -39,8 +39,6 @@ def updateNum(seriesname, translation, seriesnumber):
     a.query("Update Serials set %s = %d where sname = \'%s\'" %(translation.lower().replace(' ', ''), getDict(seriesnumber).get(translation), seriesname))
     a.save()
 
-# for j in getDict(384).keys():
-#     updateNum('Homeland', j, 384)
 
 def compare(seriesname):
     new = []

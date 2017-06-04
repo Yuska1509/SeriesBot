@@ -21,8 +21,7 @@ def hashf(a):
 def addSerial(s):
     a.query('insert into Serials(sid, sname, subs, lostfilm, newstudio, original) values (\"%d\", \"%s\", 0, 0, 0, 0);' %(hashf(s.sname), s.sname))
     a.save()
-# s = classes.Serials('sd')
-# addSerial(s)
+
 
 def addEpisodes(s, e):
     a.query('insert into Episodes(sid, sname, senumber, enumber, ename, date) values (\'%d\', \'%s\', \'%d\', \'%d\', "%s", \'%s\');' %(hashf(s.sname), s.sname, e.senumber, e.enumber, e.ename, e.date))

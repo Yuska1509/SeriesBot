@@ -77,8 +77,6 @@ class StateTraveler:
                 buttonsArray = a.fetch('Select Serials.sname from Serials inner join Podpiski on Serials.sid = Podpiski.sid where Podpiski.uid = %d group by sname order by sname;' %(self.user_id))
                 i += 1
             elif fetch[i][1] == -3:
-                # buttonsArray = [["Original"], ['Subs'], ['NewStudio'], ['LostFilm']]
-                # i += 1
                 num = a.fetch("Select num from Serials where sname = \'%s\';" %series)
                 print("num:", len(num), num)
                 if num[0][0] != None:

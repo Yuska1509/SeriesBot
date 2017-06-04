@@ -14,25 +14,6 @@ import req
 token = '308210124:AAHkb6qVLTqo0pIKsn_IQTZqvYJ7wpzVJn0'
 
 
-# @get("/notify")
-# def notify():
-# #   da1 = date(2017, 3, 19)
-#     da = datetime.today()
-#     da1 = datetime.date(da)
-#     da = int(datetime.toordinal(da1))
-#     sendinfo = a.fetch('SELECT Podpiski.uid, Episodes.sname, Episodes.ename, Podpiski.translation from Episodes inner join Podpiski on Podpiski.sid = Episodes.sid where (Episodes.date+Podpiski.status) = %d;' %da)
-#     print("sendinfo", sendinfo)
-#     token = '308210124:AAHkb6qVLTqo0pIKsn_IQTZqvYJ7wpzVJn0'
-#     for i in sendinfo:
-#         series = (i[1]).encode('utf-8')
-#         episode = (i[2]).encode('utf-8')
-#         translation = (i[3]).encode('utf-8')
-#         print(series, episode, translation)
-#         text = "Сегодня (%s) вы можете посмотреть серию \'%s\' сериала \'%s\' в озвучке \'%s\'" % (da1, episode, series, translation)
-#         chat_id = i[0]
-#         requests.get('https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s' % (token, chat_id, text))
-
-
 @get("/notify")
 def notify():
     # da1 = date(2017, 3, 25)
@@ -88,12 +69,6 @@ def notify():
                     token = '308210124:AAHkb6qVLTqo0pIKsn_IQTZqvYJ7wpzVJn0'
                     text = "Сегодня (%s) вы можете посмотреть серию \'%s\' сериала \'%s\' в озвучке \'%s\'" % (da1, episode, series, trans)
                     requests.get('https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s' % (token, chat_id, text))
-                    # sum = 0
-                    # for j in req.getDict(series).keys():
-                    #     sum = sum + int(a.fetch("Select %s from Episodes where eid = %d" %(j.lower().replace(' ', ''), st[1]))[0][0])
-                    # if sum == 0:
-                    #     a.query('Delete from Episodes where eid = %d' %(st[1]))
-
 
 
 lastserial = ''

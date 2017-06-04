@@ -38,9 +38,6 @@ def UnsubscibeFromTranslation(translation, series, chat_id, token, keyboard):
 
 def SubscribeToSeries(translation, series, chat_id, token, keyboard):
     sid = bdserials.hashf(series)
-#    fetch = a.fetch('Select %s from Serials where sname = \'%s\';' % (translation.lower(), series))
- #   status = int(fetch[0][0])
-#    a.query('Insert into Podpiski (sid, uid, status, translation) values (%d, %d, %d, \'%s\')' %(sid, chat_id, status, translation))
     a.query('Insert into Podpiski (sid, uid, translation) values (%d, %d, \'%s\')' % (sid, chat_id, translation))
     a.save()
     series = series.encode("utf-8")
